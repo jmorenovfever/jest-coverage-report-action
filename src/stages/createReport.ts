@@ -39,6 +39,9 @@ export const createReport = (
         thresholdResults
     );
 
+    console.log('createReport: formatCoverage: ');
+    console.log('createReport: headReport: ', !!headReport);
+    console.log('createReport: baseReport: ', !!baseReport);
     const coverage = formatCoverage(headReport, baseReport, undefined, false);
     const formattedReport = runReport ? formatRunReport(runReport) : '';
 

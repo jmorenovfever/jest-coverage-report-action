@@ -8,7 +8,7 @@ export const getSummary = (
     coveredCounter: (value: FileCoverage) => number,
     title: string
 ): CoverageSummary => {
-    console.log('getSummary: Object values: ', map);
+    console.log('getSummary: Object values: ', !!map);
 
     const values = Object.values(map).map((value) =>
         'statementMap' in value ? value : value.data
