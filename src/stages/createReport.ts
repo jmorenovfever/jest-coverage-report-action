@@ -41,7 +41,7 @@ export const createReport = (
 
     console.log('createReport: formatCoverage: ');
     console.log('createReport: headReport: ', !!headReport?.coverageMap);
-    console.log('createReport: baseReport: ', !!baseReport?.coverageMap);
+    console.log('createReport: baseReport: ', baseReport);
     const coverage = formatCoverage(headReport, baseReport, undefined, false);
     const formattedReport = runReport ? formatRunReport(runReport) : '';
 
