@@ -11,6 +11,7 @@ import {
 } from '../counters';
 
 export const parseSummary = (jsonReport: JsonReport) => {
+    console.log('parseSummary: ', !!jsonReport.coverageMap);
     return [
         getSummary(
             jsonReport.coverageMap,
