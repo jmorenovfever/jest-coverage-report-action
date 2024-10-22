@@ -24,10 +24,14 @@ export const getSummary = (
         0
     );
 
-    return {
+    const result = {
         title,
         total,
         covered,
         percentage: getPercents(covered, total),
     };
+
+    console.log('getSummary: finished');
+
+    return result;
 };

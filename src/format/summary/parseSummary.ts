@@ -12,7 +12,8 @@ import {
 
 export const parseSummary = (jsonReport: JsonReport) => {
     console.log('parseSummary: ', !!jsonReport.coverageMap);
-    return [
+
+    const result = [
         getSummary(
             jsonReport.coverageMap,
             standardTotalCounter('s'),
@@ -38,4 +39,8 @@ export const parseSummary = (jsonReport: JsonReport) => {
             i18n('lines')
         ),
     ];
+
+    console.log('parseSummary: finished');
+
+    return result;
 };
