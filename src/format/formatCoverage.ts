@@ -10,8 +10,8 @@ export const formatCoverage = (
     hideDetails: boolean | undefined
 ): string => {
     console.log('formatCoverage');
-    console.log('headReport: ', !!headReport);
-    console.log('baseReport: ', !!baseReport);
+    console.log('headReport: ', !!headReport?.coverageMap);
+    console.log('baseReport: ', !!baseReport?.coverageMap);
     if (headReport) {
         return getFormattedCoverage(
             parseSummary(headReport),
